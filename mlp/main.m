@@ -5,7 +5,7 @@ clear
 path = '.\datasets\Darknet_preprocessed.csv';
 data = readtable(path, 'PreserveVariableNames', true);
 
-[trainData, valData, testData] = splitData(data, 0.6, 0.2, 0.2);
+[trainData, valData, testData] = splitDataWithRatio(data, 0.6, 0.2, 0.2);
 
 % Get the features but exclude the unnecessary columns
 columnsToExclude = { 'Label' };
